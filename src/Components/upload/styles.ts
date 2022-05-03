@@ -33,6 +33,15 @@ export const Uploader = styled.div`
   border: 2px dashed rgba(216, 255, 254, 0.4);
   box-sizing: border-box;
   border-radius: 4px;
+  svg {
+    color: #008a86;
+    left: 140px;
+    font-size: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const Filelists = styled.div`
@@ -43,4 +52,19 @@ export const Filelists = styled.div`
   border: 2px dashed rgba(216, 255, 254, 0.4);
   box-sizing: border-box;
   border-radius: 4px;
+`;
+export const ContentFile = styled.div`
+  font-size: 11px;
+  display: flex;
+  margin-top: 20px;
+
+  justify-content: space-around;
+  color: ${props => props.theme.colors.primary.text};
+  margin-top: px;
+  weight: 700, bold;
+
+  svg {
+    margin-top: 3px;
+    margin-left: 15px;
+  }
 `;
