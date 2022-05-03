@@ -13,7 +13,7 @@ export default {
   }
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = args => <Header {...args} />;
+const Template: ComponentStory<typeof Header> = (args: any) => <Header {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {};
