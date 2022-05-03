@@ -1,10 +1,10 @@
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import type { AppProps } from 'next/app';
+// import type { AppProps } from 'next/app';
 import GlobalStyles from '../styles/global';
 import themeStyled from '../styles/theme';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: any) {
   const theme = createTheme({
     palette: {
       ...themeStyled.colors
@@ -12,14 +12,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <ThemeProviderStyled theme={themeStyled}>
-          <Component {...pageProps} />
-          <GlobalStyles />
-        </ThemeProviderStyled>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <ThemeProviderStyled theme={themeStyled}>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </ThemeProviderStyled>
+    </ThemeProvider>
   );
 }
 
