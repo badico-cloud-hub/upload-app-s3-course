@@ -1,9 +1,16 @@
-import { Container } from './styles';
+import { Container, Content, Filelists, Uploader } from './styles';
 
-export default function uploade() {
+export default function upload() {
   return (
     <Container>
-      <h1>Header</h1>
+      <Content>
+        <Uploader>
+          <h1>Upload</h1>
+        </Uploader>
+        <Filelists>
+          <h1>Arquivos Enviados</h1>
+        </Filelists>
+      </Content>
     </Container>
   );
 }
