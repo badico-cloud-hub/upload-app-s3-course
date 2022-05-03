@@ -5,12 +5,7 @@ module.exports = {
     node: true,
     jest: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'airbnb-typescript',
-    'prettier'
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'airbnb-typescript', 'prettier', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
@@ -22,13 +17,12 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'prettier/prettier': 'error',
     'space-before-function-paren': 'off',
     'react/prop-types': 'off',
-    'import/prefer-default-export': 'off',
+    'import/prefer-default-export': 'off'
   }
 };
