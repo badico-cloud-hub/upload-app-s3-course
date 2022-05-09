@@ -1,7 +1,7 @@
-import { Container } from './styles';
+import './header.css';
 
 export const Header = ({}) => (
-  <Container>
+  <header>
     <h1>Badico</h1>
-  </Container>
+  </header>
 );

@@ -1,10 +1,13 @@
-.wrapper {
+header {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+background: linear-gradient(269.57deg, #011c1c 12.93%, #052e2e 102.24%);
+
+box-shadow: rgba(0, 4, 5, 0.4);
 }
 
 svg {
@@ -13,6 +16,7 @@ svg {
 }
 
 h1 {
+color: #fff;
   font-weight: 900;
   font-size: 20px;
   line-height: 1;
@@ -21,12 +25,3 @@ h1 {
   vertical-align: top;
 }
 
-button + button {
-  margin-left: 10px;
-}
-
-.welcome {
-  color: #333;
-  font-size: 14px;
-  margin-right: 10px;
-}

@@ -1,19 +1,20 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Container } from './styles';
-import Header from '../Components/Header';
+import './header.css';
+import { Header } from './Header';
 
 export default {
-  title: 'Example/Header',
-  component: Container,
+  title: 'Projeto/Header',
+  component: Header,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen'
   }
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = args => <Header {...args} />;
+const Story: ComponentStory<typeof Header> = args => <Header {...args} />;
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {};
+export const Container = Story.bind({});
+Container.args = {};
