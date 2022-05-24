@@ -5,6 +5,7 @@ import TabsUnstyled from '@mui/base/TabsUnstyled';
 import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import TabUnstyled from '@mui/base/TabUnstyled';
+import mocke from './mocke';
 ///Icons ///
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
@@ -33,18 +34,19 @@ interface UploadProps {
 }
 
 export default function Upload(file: UploadProps) {
-  const [files, setFiles] = useState([file]);
+  const [files, setFiles] = useState([...mocke]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
     multiple: true,
 
     onDrop: acceptedFiles => {
-      setFiles(
-        acceptedFiles.map(file =>
+      setFiles(previous => {
+        const newsfiles = acceptedFiles.map(file =>
           Object.assign(file, { preview: URL.createObjectURL(file) })
-        )
-      );
+        );
+        return [...newsfiles, ...previous];
+      });
     }
   });
 
