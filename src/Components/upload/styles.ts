@@ -23,13 +23,11 @@ export const Container = styled.div`
     text-align: center;
   }
 `;
-
 export const Content = styled.div`
   display: flex;
 
   justify-content: space-around;
 `;
-
 /// styled uploader ///
 export const Uploader = styled.div`
   display: flex;
@@ -67,7 +65,6 @@ line-height: 15px;
 text-align: center;
 color: rgba(255, 255, 255, 0.3);
 
-
  }
   strong {
     color: white;
@@ -96,7 +93,6 @@ color: rgba(255, 255, 255, 0.3);
      margin-right: 15px;
     }
   }
-
   svg{
     color: #008486;
     left: 140px;
@@ -108,12 +104,11 @@ color: rgba(255, 255, 255, 0.3);
     text-align: center;
   }
 `;
-
 /// styled fileLists  ///
 export const Filelists = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 400px;
+  width: 420px;
   height: 400px;
   border: 2px dashed rgba(216, 255, 254, 0.4);
   box-sizing: border-box;
@@ -148,13 +143,28 @@ export const ContentIcons = styled.div`
     margin-top: 3px;
     margin-left: 15px;
   }
-`;
+:hover{
+            color:blue;
+        }
 
+  ::after{
+            content: '';
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            background: red;
+        }
+
+
+
+`;
 ///styled Thumb de imagens///
 export const ThumbsContainer = styled.div`
   overflow: auto;
   position: absolute;
-  width: 460px;
+  width:  465px;
   height: 332px;
   left: 420px;
   top: 85px;
@@ -170,33 +180,39 @@ export const ThumbsContainer = styled.div`
     background-color:#2992A5;
    border-radius: 8px;
   }
- .grid{
-    display: grid;
- display: grid;
-  margin: 10px;
-  grid-template-columns: 150px 240px 250px;
-  grid-gap: 65px;
-  align-items: stretch;
+.grid{
+  display: grid;
+  margin-left: 3.1rem;
+  grid-template-columns: 170px 170px;
+  grid-gap:-1px;
+  align-items:stretch;
+  img{
+  width: 150px;
+  height: 95px;
+  }
 
  }
    .namegrid{
    display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 50px 100px 250px;
-   width: 460px;
-  height: 300px;
- //display: flex;
+  grid-template-columns: 120px 125px  ;
+
  text-align: bottom;
-  position: relative;
-//flex-direction: column;
-  justify-content: center;
-   color: #000;
-
-
-
-
  }
-
+ .nameviewOne{
+ display: grid;
+  grid-template-columns: 120px 120px;
+  justify-content: center;
+}
+.viewone{
+margin-left: 80px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+  img{
+width: 298px;
+height: 250px;
+}
+}
 `;
 
 export const Thumb = styled.div`
@@ -204,19 +220,32 @@ export const Thumb = styled.div`
   margin: 10px;
   grid-template-columns: 200px 200px 200px;
   padding: 2px;
-  width: 10px;
-  height: 40px;
   box-sizing: border-box;
+
+  .one{
+ display: grid;
+grid-template-columns: 120px 125px;
+  height: 285px;
+  div{
+  margin-left:90px;
+  width: max-content;
+  justify-content:center;
+   text-align: center;
+  }
+
+  }
+
 `;
 
 export const ThumbInfor = styled.div`
   display: flex;
-  width: 315px;
-  height: 40px;
+  width: 300px;
   position: static;
   justify-content: center;
-  overflow: hidden;
 flex-direction: row;
+img{
+height: 40px;
+}
  div{
  margin-left: 3px;
  }
@@ -230,6 +259,30 @@ export const ButtonRemove = styled.div`
   border: 0;
   cursor: pointer;
 `;
+
+export const ButtonRemoveGrid = styled.div`
+  color: #2992A5;
+  width: 30px;
+  display: flex;
+align-items: flex-end;
+   margin-top: 60px;
+  position: absolute;
+  padding: 5px;
+  cursor: pointer;
+`;
+
+export const ButtonRemoveOne = styled.div`
+  color: #2992A5;
+  width: 30px;
+  display: flex;
+align-items: flex-end;
+   margin-top: 13rem;
+  position: absolute;
+  padding: 5px;
+  cursor: pointer;
+`;
+
+
 
 //style
 export const Scroll = styled.div`
