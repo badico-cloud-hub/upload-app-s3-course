@@ -23,7 +23,9 @@ import {
   ThumbsContainer,
   ThumbInfor,
   Thumb,
-  ButtonRemove
+  ButtonRemove,
+  ButtonRemoveGrid,
+  ButtonRemoveOne
 } from './styles';
 
 interface UploadProps {
@@ -60,8 +62,8 @@ export default function Upload(file: UploadProps) {
     [files]
   );
 
-  const thumbs = files.map((file, index) => (
-    <section>
+  const Thumbs = () =>
+    files.map((file, index) => (
       <Thumb key={index}>
         <ThumbInfor>
           <img src={file.preview} />
@@ -75,8 +77,41 @@ export default function Upload(file: UploadProps) {
           <DeleteForeverIcon />
         </ButtonRemove>
       </Thumb>
-    </section>
-  ));
+    ));
+
+  const ThumbGrid = () =>
+    files.map((file, index) => (
+      <Thumb key={index}>
+        <div>
+          <img src={file.preview} />
+          <div key={file.name} />
+          <div key={file.path}>{file.path}</div>
+        </div>
+        <ButtonRemoveGrid
+          type="button"
+          onClick={() => handleRemoveImage(file.name)}
+        >
+          <DeleteForeverIcon />
+        </ButtonRemoveGrid>
+      </Thumb>
+    ));
+
+  const ThumbOne = () =>
+    files.map((file, index) => (
+      <Thumb key={index}>
+        <div className="one">
+          <img src={file.preview} />
+          <div key={file.name} />
+          <div key={file.path}>{file.path}</div>
+        </div>
+        <ButtonRemoveOne
+          type="button"
+          onClick={() => handleRemoveImage(file.name)}
+        >
+          <DeleteForeverIcon />
+        </ButtonRemoveOne>
+      </Thumb>
+    ));
 
   useEffect(
     () => () => {
@@ -120,15 +155,20 @@ export default function Upload(file: UploadProps) {
             </ContentIcons>
 
             <ThumbsContainer>
-              <TabPanelUnstyled value={0}>{thumbs}</TabPanelUnstyled>
+              <TabPanelUnstyled value={0}>
+                <Thumbs />
+              </TabPanelUnstyled>
               <ThumbInfor className="namegrid">
                 <TabPanelUnstyled className="grid" value={1}>
-                  {thumbs}
+                  <ThumbGrid />
                 </TabPanelUnstyled>
               </ThumbInfor>
-              <TabPanelUnstyled className="viewOne" value={2}>
-                {thumbs}
-              </TabPanelUnstyled>
+
+              <ThumbInfor className="nameviewOne">
+                <TabPanelUnstyled className="viewone" value={2}>
+                  <ThumbOne />
+                </TabPanelUnstyled>
+              </ThumbInfor>
             </ThumbsContainer>
           </TabsUnstyled>
         </Filelists>
