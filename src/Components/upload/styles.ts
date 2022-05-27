@@ -143,22 +143,6 @@ export const ContentIcons = styled.div`
     margin-top: 3px;
     margin-left: 15px;
   }
-:hover{
-            color:blue;
-        }
-
-  ::after{
-            content: '';
-            height: 3px;
-            border-radius: 3px 3px 0 0;
-            position: absolute;
-            bottom: 1px;
-            left: 0;
-            background: red;
-        }
-
-
-
 `;
 ///styled Thumb de imagens///
 export const ThumbsContainer = styled.div`
@@ -228,10 +212,10 @@ export const Thumb = styled.div`
 grid-template-columns: 120px 125px;
   height: 285px;
   div{
-  max-width: 500px; // Limite maximo do texto
- white-space: nowrap; // Removendo quebra de linha
- overflow: hidden; // Removendo a barra de rolagem
-text-overflow: ellipsis; // Adicionando "..." ao final do texto
+  max-width: 500px;
+ white-space: nowrap; a
+ overflow: hidden;
+text-overflow: ellipsis;
   margin-left:20px;
   justify-content:center;
    text-align: center;
@@ -246,8 +230,8 @@ display: flex;
 position: static;
 justify-content: center;
 flex-direction: row;
-overflow: hidden; // Removendo a barra de rolagem
-text-overflow: ellipsis; // Adicionando "..." ao final do texto
+overflow: hidden;
+text-overflow: ellipsis;
 img{
 margin-left: 10px;
 height: 40px;
