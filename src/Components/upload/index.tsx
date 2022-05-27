@@ -99,7 +99,7 @@ export default function Upload(file: UploadProps) {
   const ThumbOne = () =>
     files.map((file, index) => (
       <Thumb key={index}>
-        <div className="one">
+        <div className="infoFile">
           <img src={file.preview} />
           <div key={file.name} />
           <div key={file.path}>{file.path}</div>
