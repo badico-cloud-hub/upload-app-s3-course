@@ -165,7 +165,7 @@ export const ThumbsContainer = styled.div`
   overflow: auto;
   position: absolute;
   width:  465px;
-  height: 332px;
+  max-height: 332px;
   left: 420px;
   top: 85px;
   ::-webkit-scrollbar {
@@ -186,7 +186,9 @@ export const ThumbsContainer = styled.div`
   grid-template-columns: 170px 170px;
   grid-gap:-1px;
   align-items:stretch;
+
   img{
+  padding-bottom: 10px;
   width: 150px;
   height: 95px;
   }
@@ -194,41 +196,43 @@ export const ThumbsContainer = styled.div`
  }
    .namegrid{
    display: grid;
-  grid-template-columns: 120px 125px  ;
-
+    padding-bottom: 5px;
+  grid-template-columns: 240px 143px  ;
  text-align: bottom;
  }
  .nameviewOne{
  display: grid;
-  grid-template-columns: 120px 120px;
+  grid-template-columns: 120px 140px;
   justify-content: center;
 }
 .viewone{
-margin-left: 80px;
 display:flex;
 flex-direction: column;
 justify-content: center;
   img{
 width: 298px;
-height: 250px;
+min-height: 242px;
 }
 }
 `;
 
 export const Thumb = styled.div`
   display: grid;
-  margin: 10px;
-  grid-template-columns: 200px 200px 200px;
+  margin-left: 70px;
+  grid-template-columns: 178px 321px 191px;
   padding: 2px;
   box-sizing: border-box;
 
-  .one{
+  .infoFile{
  display: grid;
 grid-template-columns: 120px 125px;
   height: 285px;
   div{
-  margin-left:90px;
-  width: max-content;
+  max-width: 500px; // Limite maximo do texto
+ white-space: nowrap; // Removendo quebra de linha
+ overflow: hidden; // Removendo a barra de rolagem
+text-overflow: ellipsis; // Adicionando "..." ao final do texto
+  margin-left:20px;
   justify-content:center;
    text-align: center;
   }
@@ -238,23 +242,25 @@ grid-template-columns: 120px 125px;
 `;
 
 export const ThumbInfor = styled.div`
-  display: flex;
-  width: 300px;
-  position: static;
-  justify-content: center;
+display: flex;
+position: static;
+justify-content: center;
 flex-direction: row;
+overflow: hidden; // Removendo a barra de rolagem
+text-overflow: ellipsis; // Adicionando "..." ao final do texto
 img{
+margin-left: 10px;
 height: 40px;
 }
  div{
- margin-left: 3px;
+ margin-left: 5px;
  }
 `;
 ///styled boton de remove ///
 export const ButtonRemove = styled.div`
   color: #2992A5;
   width: 30px;
-  margin-left:11rem;
+  margin-left:9rem;
   padding: 8px;
   border: 0;
   cursor: pointer;
@@ -265,9 +271,9 @@ export const ButtonRemoveGrid = styled.div`
   width: 30px;
   display: flex;
 align-items: flex-end;
-   margin-top: 60px;
+   margin-top: 50px;
   position: absolute;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
 `;
 
@@ -276,15 +282,12 @@ export const ButtonRemoveOne = styled.div`
   width: 30px;
   display: flex;
 align-items: flex-end;
-   margin-top: 13rem;
+   margin-top: 12.5rem;
   position: absolute;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
 `;
 
-
-
-//style
 export const Scroll = styled.div`
    left: 300px;
      position: 'relative',
