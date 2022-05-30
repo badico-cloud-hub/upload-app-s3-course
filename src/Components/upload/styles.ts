@@ -155,7 +155,6 @@ export const ThumbsContainer = styled.div`
   ::-webkit-scrollbar {
     width: 7px;
   }
-
   ::-webkit-scrollbar-track {
     background: #01364A;
   }
@@ -166,28 +165,22 @@ export const ThumbsContainer = styled.div`
   }
 .grid{
   display: grid;
-  margin-left: 3.1rem;
-  grid-template-columns: 170px 170px;
-  grid-gap:-1px;
+  margin-left: 1.5rem;
+  grid-template-columns: 160px 120px;
+  grid-gap:10px;
   align-items:stretch;
-
   img{
-  padding-bottom: 10px;
-  width: 150px;
+  padding-bottom: -5px;
+  width: 160px;
   height: 95px;
   }
 
- }
-   .namegrid{
-   display: grid;
-    padding-bottom: 5px;
-  grid-template-columns: 240px 143px  ;
- text-align: bottom;
  }
  .nameviewOne{
  display: grid;
   grid-template-columns: 120px 140px;
   justify-content: center;
+  text-align: center;
 }
 .viewone{
 display:flex;
@@ -195,7 +188,7 @@ flex-direction: column;
 justify-content: center;
   img{
 width: 298px;
-min-height: 242px;
+min-height: 238px;
 }
 }
 `;
@@ -203,40 +196,45 @@ min-height: 242px;
 export const Thumb = styled.div`
   display: grid;
   margin-left: 70px;
-  grid-template-columns: 178px 321px 191px;
+  grid-template-columns: 178px 250px 191px;
   padding: 2px;
   box-sizing: border-box;
+.list{
+width: 600px;
+ white-space: nowrap;
+ overflow-x: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: Horizontal;
+}
 
   .infoFile{
  display: grid;
 grid-template-columns: 120px 125px;
   height: 285px;
+  text-align: center;
   div{
-  max-width: 500px;
- white-space: nowrap; a
+  max-width: 300px;
+ white-space: nowrap;
  overflow: hidden;
-text-overflow: ellipsis;
-  margin-left:20px;
-  justify-content:center;
-   text-align: center;
+text-overflow:ellipsis;
+margin :auto;
+text-align:center;
   }
-
   }
-
 `;
-
 export const ThumbInfor = styled.div`
 display: flex;
 position: static;
 justify-content: center;
 flex-direction: row;
-overflow: hidden;
-text-overflow: ellipsis;
+
 img{
-margin-left: 10px;
+margin-left: 5px;
 height: 40px;
 }
  div{
+margin-bottom:5px;
  margin-left: 5px;
  }
 `;

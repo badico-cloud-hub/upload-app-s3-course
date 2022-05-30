@@ -66,9 +66,11 @@ export default function Upload(file: UploadProps) {
     files.map((file, index) => (
       <Thumb key={index}>
         <ThumbInfor>
-          <img src={file.preview} />
-          <div key={file.name} />
-          <div key={file.path}>{file.path}</div>
+          <section className="list">
+            <img src={file.preview} />
+            <div key={file.name} />
+            <div key={file.path}>{file.path}</div>
+          </section>
         </ThumbInfor>
         <ButtonRemove
           type="button"
@@ -82,11 +84,11 @@ export default function Upload(file: UploadProps) {
   const ThumbGrid = () =>
     files.map((file, index) => (
       <Thumb key={index}>
-        <div>
+        <section>
           <img src={file.preview} />
           <div key={file.name} />
           <div key={file.path}>{file.path}</div>
-        </div>
+        </section>
         <ButtonRemoveGrid
           type="button"
           onClick={() => handleRemoveImage(file.name)}
@@ -99,11 +101,11 @@ export default function Upload(file: UploadProps) {
   const ThumbOne = () =>
     files.map((file, index) => (
       <Thumb key={index}>
-        <div className="infoFile">
+        <section className="infoFile">
           <img src={file.preview} />
-          <div key={file.name} />
+          <div ClassNkey={file.name} />
           <div key={file.path}>{file.path}</div>
-        </div>
+        </section>
         <ButtonRemoveOne
           type="button"
           onClick={() => handleRemoveImage(file.name)}
@@ -158,7 +160,7 @@ export default function Upload(file: UploadProps) {
               <TabPanelUnstyled value={0}>
                 <Thumbs />
               </TabPanelUnstyled>
-              <ThumbInfor className="namegrid">
+              <ThumbInfor>
                 <TabPanelUnstyled className="grid" value={1}>
                   <ThumbGrid />
                 </TabPanelUnstyled>
